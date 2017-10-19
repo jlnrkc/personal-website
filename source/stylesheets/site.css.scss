@@ -1,10 +1,15 @@
+@import 'mixins';
+
+main {
+  display: block;
+  margin: 0 auto;
+  max-width: 45em;
+}
+
 body {
-  background-color: rgba(133, 142, 150, 0.15);
-  color: #010003;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+  background-color: #fff;
+  color: #353535;
+  font-family: "Raleway", sans-serif;
   padding: 1vh 2rem;
   text-align: left;
   font-weight: lighter;
@@ -19,12 +24,12 @@ body {
 }
 
 a {
-  color: rgba(66, 133, 161, 0.98);
+  color: rgba(161, 161, 161, 0.98);
   text-decoration: none;
 
   &:focus,
   &:hover {
-    color: #A6C1CC;
+    color: #C9C8C8;
   }
 }
 
@@ -32,19 +37,25 @@ a {
   font-weight: lighter;
   text-align: center;
 
+  h1 {
+    @include text-hide;
+    background: image-url('JRS.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 75px;
+    margin: 0 auto;
+    width: 350px;
+  }
+
   nav {
     @extend .clearfix;
-    margin-bottom: 2em;
+    margin: 2em;
 
     a {
       display: block;
       float: left;
-      width: 25%;
+      width: 20%;
     }
   }
 }
 
-// .middleman-logo {
-//   margin-bottom: 1rem;
-//   width: 10rem;
-// }

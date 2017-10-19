@@ -1,0 +1,9 @@
+// From https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/mixins/_hide-text.scss
+
+@mixin text-hide() {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
